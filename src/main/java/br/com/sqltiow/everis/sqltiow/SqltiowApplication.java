@@ -25,9 +25,14 @@ public class SqltiowApplication implements CommandLineRunner {
 
 	@Autowired
 	private PeopleRepositorieImpl peopleRepositorieImpl;
-	
+
+	Boolean hasDeleted = true;
+
 	@Override
 	public void run(String... args) throws Exception {
 		peopleRepositorieImpl.insertLot();
+		
+		if (hasDeleted)
+			peopleRepositorieImpl.deleteLot();
 	}
 }

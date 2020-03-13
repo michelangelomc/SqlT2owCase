@@ -17,7 +17,8 @@ public class People implements Serializable {
 	private int id;
 	
 	private String name;
-
+    private String nameC;
+    
 	public People() {
 		super();
 	}
@@ -64,5 +65,13 @@ public class People implements Serializable {
 		if (id != other.id)
 			return false;
 		return true;
+	}
+
+	public String getNameC() {
+		return nameC;
+	}
+
+	public void setNameC(String nameC) {
+		this.nameC = nameC;
 	}
 }
